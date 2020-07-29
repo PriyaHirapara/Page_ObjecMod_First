@@ -5,6 +5,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.io.File;
+
 public class Util extends BasePage {
 
     public  void waituntilElementislickble(By by, int a) {
@@ -21,7 +23,8 @@ public class Util extends BasePage {
         }
     }
     // method for click element
-    public  void clickonElement(By by) {
+    public  void clickonElement(By by)
+    {
         driver.findElement(by).click();
     }
     //method for sendkey
@@ -52,6 +55,20 @@ public class Util extends BasePage {
         Select select = new Select(driver.findElement(by));
         select.selectByIndex(Indexvalue);
     }
+    //method for taking screenshot
+    //public void takeScreenShot(String screenshotname){
+       // File
+    //}
+    /*public void screenShot(String screenShotName){
+        //method for taking screenshot
+        File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        try {
+            FileHandler.copy(srcFile, new File("src\\test\\ScreenShots" +screenShotName+" .png"));
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+       }}*/
+
     //method for timestamp
     public  long timestamp()
     {

@@ -2,13 +2,16 @@ package org.example;
 
 import org.openqa.selenium.By;
 import org.testng.Assert;
-//creat a homePage class we creat parent child relation. extend to util class
+import org.testng.annotations.Test;
+
+@Test
+//inharitant child class homepage with parent util class
 public class HomePage extends Util
 {
     //store locaters in _registerButton veriable
     private By _registerButton = By.xpath("//a[@class=\"ico-register\"]");
     //store locater _welcomeTitleText veriable
-    private By _welcomeTitleText =By.xpath("//div[@class =\"topic-block-title\"]/h2");
+    private By _welcomeTitleText =By.xpath("//h2[text()=\"Welcome to our store\"]");
     //store locater veriable
     private String _expecetedTitleOOfThePage ="Welcome to our store";
     //store locater veriable

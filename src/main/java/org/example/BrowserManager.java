@@ -18,7 +18,7 @@ public class BrowserManager extends Util {//Method for Open HomePage
             //applying implist wait of 20 sec to the driver ins
             driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
             // open nop commerce web side
-            driver.get("https://demo.nopcommerce.com/");
+            driver.get("https://demo.nopcommerce.com");
         }
         //method for browser close
         public  void browserclose()
